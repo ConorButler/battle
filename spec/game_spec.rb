@@ -17,4 +17,9 @@ describe Game do
     expect(player2).to receive(:deduct_hp)
     game.attack(player2)
   end
+
+  it 'can switch turns' do
+    game.switch_turns
+    expect(game.current_turn).to eq player2
+  end
 end
